@@ -201,8 +201,8 @@ def main():
                     if bombs[i] is not None and beams[j] is not None:  # 演習2
                         if beam.rct.colliderect(bomb.rct):
                             # ビームが爆弾に当たったら，爆弾とビームを消す
-                            bombs[i] = None
-                            beams[j] = None
+                            bombs[i] = None  # i番目の爆弾
+                            beams[j] = None  # j番目のビーム
                             bird.change_img(6, screen)
                             score.score += 1  # 演習1 爆弾当たったら+1
                             pg.display.update()
